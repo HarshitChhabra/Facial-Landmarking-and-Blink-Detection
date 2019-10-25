@@ -48,7 +48,7 @@ def calcDist(pt1,pt2):
 totalBlinks = 0
 minFrameBlinks = 0
 minFrameToCountAsBlink = 3
-thresholdEAR = 0.2
+thresholdEAR = 0.2 #even smaller for chinese!
 flag = 0
 
 def mainDetector(image):
@@ -99,10 +99,6 @@ def mainDetector(image):
         for (x,y) in shape:
             # Below code plots numbers for the dots of facial landmarks
             cv2.circle(image,(x,y),1,(0,255,0),-1)
-
-            #Annotation for landmark
-            #cv2.putText(image, str(ind), (x , y ),
-            #            cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 255, 0), 1)
 
             ind+=1
 
